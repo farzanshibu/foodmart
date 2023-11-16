@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Harmic - {% block title %} Home {% endblock %}</title>
+		<meta name="robots" content="noindex, follow" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Favicon -->
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="{% static 'images/favicon.ico' %}"
+		/>
+		<!-- ======= CSS ======= -->
+		{% block css %} {% include "css.html" %} {% endblock %}
+	</head>
+
+	<body>
+		<div class="main-wrapper">
+			<!-- ======= Header ======= -->
+			{% block header %} {% include 'header.html' %} {% endblock %}
+
+			<!-- ======= Content ======= -->
+			{% block content %}{% endblock %}
+
+			<!-- ======= Footer ======= -->
+			{% block footer %} {% include "footer.html" %} {% endblock %}
+
+			<!-- Begin Scroll To Top -->
+			<a class="scroll-to-top" href="">
+				<i class="fa fa-chevron-up"></i>
+			</a>
+			<!-- Scroll To Top End Here -->
+		</div>
+
+		<!-- ======= Scripts ======= -->
+		{% block scripts %} {% include "scripts.html" %} {% endblock %}
+	</body>
+</html>
