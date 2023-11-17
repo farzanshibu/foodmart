@@ -19,4 +19,10 @@ from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("core.urls")),
+    path("account/", include("userauth.urls")),
 ]
+
+handler404 = "error.views.Error_404_View"
+handler500 = "error.views.Error_500_View"
+handler400 = "error.views.BadRequest_400_View"
+handler403 = "error.views.PermissionDenied_403_View"

@@ -13,7 +13,9 @@
 						<h2 class="breadcrumb-heading">Blog Layout</h2>
 						<ul>
 							<li>
-								<a href="index.html">Home <i class="pe-7s-angle-right"></i></a>
+								<a href="{% url 'core:home' %}"
+									>Home <i class="pe-7s-angle-right"></i
+								></a>
 							</li>
 							<li>Blog Default</li>
 						</ul>
@@ -28,7 +30,7 @@
 				<div class="col-md-6">
 					<div class="blog-item">
 						<div class="blog-img img-zoom-effect">
-							<a href="blog-detail-left-sidebar.html">
+							<a href="{% url 'core:blog-details' %}">
 								<img
 									class="img-full"
 									src="images/blog/medium-size/2-1-570x485.jpg"
@@ -53,7 +55,7 @@
 								</ul>
 							</div>
 							<h5 class="title mb-4">
-								<a href="blog-detail-left-sidebar.html">Blog Image Post</a>
+								<a href="{% url 'core:blog-details' %}">Blog Image Post</a>
 							</h5>
 							<p class="short-desc mb-5">
 								Lorem ipsum dolor sit amet, consectet adipi elit, sed do eius
@@ -62,7 +64,7 @@
 							<div class="button-wrap">
 								<a
 									class="btn btn-custom-size lg-size btn-dark rounded-0"
-									href="blog-detail-left-sidebar.html"
+									href="{% url 'core:blog-details' %}"
 									>Read More</a
 								>
 							</div>
@@ -75,7 +77,7 @@
 							<div class="swiper-slide">
 								<div class="blog-item">
 									<div class="blog-img img-zoom-effect">
-										<a href="blog-detail-left-sidebar.html">
+										<a href="{% url 'core:blog-details' %}">
 											<img
 												class="img-full"
 												src="images/blog/medium-size/2-3-570x485.jpg"
@@ -100,7 +102,7 @@
 											</ul>
 										</div>
 										<h5 class="title mb-4">
-											<a href="blog-detail-left-sidebar.html"
+											<a href="{% url 'core:blog-details' %}"
 												>Blog Gallery Post</a
 											>
 										</h5>
@@ -111,7 +113,7 @@
 										<div class="button-wrap">
 											<a
 												class="btn btn-custom-size lg-size btn-dark rounded-0"
-												href="blog-detail-left-sidebar.html"
+												href="{% url 'core:blog-details' %}"
 												>Read More</a
 											>
 										</div>
@@ -121,7 +123,7 @@
 							<div class="swiper-slide">
 								<div class="blog-item">
 									<div class="blog-img img-zoom-effect">
-										<a href="blog-detail-left-sidebar.html">
+										<a href="{% url 'core:blog-details' %}">
 											<img
 												class="img-full"
 												src="images/blog/medium-size/2-2-570x485.jpg"
@@ -146,7 +148,7 @@
 											</ul>
 										</div>
 										<h5 class="title mb-4">
-											<a href="blog-detail-left-sidebar.html"
+											<a href="{% url 'core:blog-details' %}"
 												>Blog Second Gallery Post</a
 											>
 										</h5>
@@ -157,7 +159,7 @@
 										<div class="button-wrap">
 											<a
 												class="btn btn-custom-size lg-size btn-dark rounded-0"
-												href="blog-detail-left-sidebar.html"
+												href="{% url 'core:blog-details' %}"
 												>Read More</a
 											>
 										</div>
@@ -167,7 +169,7 @@
 							<div class="swiper-slide">
 								<div class="blog-item">
 									<div class="blog-img img-zoom-effect">
-										<a href="blog-detail-left-sidebar.html">
+										<a href="{% url 'core:blog-details' %}">
 											<img
 												class="img-full"
 												src="images/blog/medium-size/2-1-570x485.jpg"
@@ -192,7 +194,7 @@
 											</ul>
 										</div>
 										<h5 class="title mb-4">
-											<a href="blog-detail-left-sidebar.html"
+											<a href="{% url 'core:blog-details' %}"
 												>Blog Third Gallery Post</a
 											>
 										</h5>
@@ -203,7 +205,7 @@
 										<div class="button-wrap">
 											<a
 												class="btn btn-custom-size lg-size btn-dark rounded-0"
-												href="blog-detail-left-sidebar.html"
+												href="{% url 'core:blog-details' %}"
 												>Read More</a
 											>
 										</div>
@@ -238,7 +240,7 @@
 								</ul>
 							</div>
 							<h5 class="title mb-4">
-								<a href="blog-detail-left-sidebar.html">Blog Audio Post</a>
+								<a href="{% url 'core:blog-details' %}">Blog Audio Post</a>
 							</h5>
 							<p class="short-desc mb-5">
 								Lorem ipsum dolor sit amet, consectet adipi elit, sed do eius
@@ -247,7 +249,7 @@
 							<div class="button-wrap">
 								<a
 									class="btn btn-custom-size lg-size btn-dark rounded-0"
-									href="blog-detail-left-sidebar.html"
+									href="{% url 'core:blog-details' %}"
 									>Read More</a
 								>
 							</div>
@@ -281,7 +283,7 @@
 								</ul>
 							</div>
 							<h5 class="title mb-4">
-								<a href="blog-detail-left-sidebar.html">Blog Video Post</a>
+								<a href="{% url 'core:blog-details' %}">Blog Video Post</a>
 							</h5>
 							<p class="short-desc mb-5">
 								Lorem ipsum dolor sit amet, consectet adipi elit, sed do eius
@@ -290,7 +292,7 @@
 							<div class="button-wrap">
 								<a
 									class="btn btn-custom-size lg-size btn-dark rounded-0"
-									href="blog-detail-left-sidebar.html"
+									href="{% url 'core:blog-details' %}"
 									>Read More</a
 								>
 							</div>
@@ -300,7 +302,7 @@
 				<div class="col-md-6 pt-6">
 					<div class="blog-item">
 						<div class="blog-img img-zoom-effect">
-							<a href="blog-detail-left-sidebar.html">
+							<a href="{% url 'core:blog-details' %}">
 								<img
 									class="img-full"
 									src="images/blog/medium-size/2-3-570x485.jpg"
@@ -325,7 +327,7 @@
 								</ul>
 							</div>
 							<h5 class="title mb-4">
-								<a href="blog-detail-left-sidebar.html"
+								<a href="{% url 'core:blog-details' %}"
 									>Lorem ipsum dolor sit amet consecte</a
 								>
 							</h5>
@@ -336,7 +338,7 @@
 							<div class="button-wrap">
 								<a
 									class="btn btn-custom-size lg-size btn-dark rounded-0"
-									href="blog-detail-left-sidebar.html"
+									href="{% url 'core:blog-details' %}"
 									>Read More</a
 								>
 							</div>
@@ -346,7 +348,7 @@
 				<div class="col-md-6 pt-6">
 					<div class="blog-item">
 						<div class="blog-img img-zoom-effect">
-							<a href="blog-detail-left-sidebar.html">
+							<a href="{% url 'core:blog-details' %}">
 								<img
 									class="img-full"
 									src="images/blog/medium-size/2-4-570x485.jpg"
@@ -371,7 +373,7 @@
 								</ul>
 							</div>
 							<h5 class="title mb-4">
-								<a href="blog-detail-left-sidebar.html"
+								<a href="{% url 'core:blog-details' %}"
 									>Lorem ipsum dolor sit amet consecte</a
 								>
 							</h5>
@@ -382,7 +384,7 @@
 							<div class="button-wrap">
 								<a
 									class="btn btn-custom-size lg-size btn-dark rounded-0"
-									href="blog-detail-left-sidebar.html"
+									href="{% url 'core:blog-details' %}"
 									>Read More</a
 								>
 							</div>

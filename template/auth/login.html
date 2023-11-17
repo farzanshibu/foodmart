@@ -1,5 +1,4 @@
-{% extends 'base.html' %} {% load static%} {% block title %} Login | Register {%
-endblock %} {% block content %}
+{% extends 'base.html' %} {% load static%} {% block title %} Login {% endblock %} {% block content %}
 <!-- Begin Main Content Area -->
 <main class="main-content">
 	<div
@@ -13,9 +12,11 @@ endblock %} {% block content %}
 						<h2 class="breadcrumb-heading">Product Related</h2>
 						<ul>
 							<li>
-								<a href="index.html">Home <i class="pe-7s-angle-right"></i></a>
+								<a href="{% url 'core:home' %}"
+									>Home <i class="pe-7s-angle-right"></i
+								></a>
 							</li>
-							<li>Login | Register</li>
+							<li>Login</li>
 						</ul>
 					</div>
 				</div>
@@ -24,7 +25,7 @@ endblock %} {% block content %}
 	</div>
 	<div class="login-register-area section-space-y-axis-100">
 		<div class="container">
-			<div class="row">
+			<div class="row justify-content-around">
 				<div class="col-lg-6">
 					<form action="#">
 						<div class="login-form">
@@ -54,42 +55,6 @@ endblock %} {% block content %}
 										class="btn btn-custom-size lg-size btn-secondary btn-primary-hover rounded-0"
 									>
 										Login
-									</button>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="col-lg-6 pt-10 pt-lg-0">
-					<form action="#">
-						<div class="login-form">
-							<h4 class="login-title">Register</h4>
-							<div class="row">
-								<div class="col-md-6 col-12">
-									<label>First Name</label>
-									<input type="text" placeholder="First Name" />
-								</div>
-								<div class="col-md-6 col-12">
-									<label>Last Name</label>
-									<input type="text" placeholder="Last Name" />
-								</div>
-								<div class="col-md-12">
-									<label>Email Address*</label>
-									<input type="email" placeholder="Email Address" />
-								</div>
-								<div class="col-md-6">
-									<label>Password</label>
-									<input type="password" placeholder="Password" />
-								</div>
-								<div class="col-md-6">
-									<label>Confirm Password</label>
-									<input type="password" placeholder="Confirm Password" />
-								</div>
-								<div class="col-12">
-									<button
-										class="btn btn-custom-size lg-size btn-secondary btn-primary-hover rounded-0"
-									>
-										Register
 									</button>
 								</div>
 							</div>

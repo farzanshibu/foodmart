@@ -1,5 +1,4 @@
-{% extends 'base.html' %} {% load static%} {% block title %} Wishlist {%
-endblock %} {% block content %}
+{% extends 'base.html' %} {% load static%} {% block title %} Wishlist {% endblock %} {% block content %}
 <!-- Begin Main Content Area -->
 <main class="main-content">
 	<div
@@ -13,7 +12,9 @@ endblock %} {% block content %}
 						<h2 class="breadcrumb-heading">Product Related</h2>
 						<ul>
 							<li>
-								<a href="index.html">Home <i class="pe-7s-angle-right"></i></a>
+								<a href="{% url 'core:home' %}"
+									>Home <i class="pe-7s-angle-right"></i
+								></a>
 							</li>
 							<li>Wishlist</li>
 						</ul>

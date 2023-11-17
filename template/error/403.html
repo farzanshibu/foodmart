@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% load static%} {% block title %} 403 {% endblock %}
+{% block content %}
+<!-- Begin Error 404 Area -->
+<div class="error-404-area section-space-top-100">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="error-404-content">
+					<h1 class="title mb-5">403</h1>
+					<h2 class="sub-title mb-4">Page Cannot Be Accessed!</h2>
+					<p class="short-desc mb-7">
+						Seems like your dont have permission to access this page. Go back to
+						the homepage
+					</p>
+					<div class="button-wrap">
+						<a
+							class="btn btn-custom-size lg-size btn-primary btn-secondary-hover rounded-0"
+							href="{% url 'core:home' %}"
+							>Back to home</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Error 404 Area End Here -->
+{% endblock %}

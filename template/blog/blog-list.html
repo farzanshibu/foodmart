@@ -1,5 +1,4 @@
-{% extends 'base.html' %} {% load static%} {% block title %} Blog List {%
-endblock %} {% block content %}
+{% extends 'base.html' %} {% load static%} {% block title %} Blog List {% endblock %} {% block content %}
 <!-- Begin Main Content Area -->
 <main class="main-content">
 	<div
@@ -13,7 +12,9 @@ endblock %} {% block content %}
 						<h2 class="breadcrumb-heading">Blog Layout</h2>
 						<ul>
 							<li>
-								<a href="index.html">Home <i class="pe-7s-angle-right"></i></a>
+								<a href="{% url 'core:home' %}"
+									>Home <i class="pe-7s-angle-right"></i
+								></a>
 							</li>
 							<li>Blog List Right Sidebar</li>
 						</ul>
@@ -40,25 +41,25 @@ endblock %} {% block content %}
 							<div class="widgets-item">
 								<ul class="widgets-category">
 									<li>
-										<a href="blog-detail-left-sidebar.html">
+										<a href="{% url 'core:blog-details' %}">
 											Natural Products
 											<span>7</span>
 										</a>
 									</li>
 									<li>
-										<a href="blog-detail-left-sidebar.html">
+										<a href="{% url 'core:blog-details' %}">
 											Cooking Items
 											<span>3</span>
 										</a>
 									</li>
 									<li>
-										<a href="blog-detail-left-sidebar.html">
+										<a href="{% url 'core:blog-details' %}">
 											Firm Food
 											<span>4</span>
 										</a>
 									</li>
 									<li>
-										<a href="blog-detail-left-sidebar.html">
+										<a href="{% url 'core:blog-details' %}">
 											Vegetable & Oil
 											<span>6</span>
 										</a>
@@ -74,7 +75,7 @@ endblock %} {% block content %}
 										<div class="swiper-slide">
 											<div class="product-list-item">
 												<div class="product-img img-zoom-effect">
-													<a href="single-product.html">
+													<a href="{% url 'core:single-product' %}">
 														<img
 															class="img-full"
 															src="{% static 'images/blog/small-size/1-1-86x86.jpg' %}"
@@ -84,7 +85,7 @@ endblock %} {% block content %}
 												</div>
 												<div class="product-content">
 													<h5 class="title mb-3">
-														<a href="blog-detail-left-sidebar.html"
+														<a href="{% url 'core:blog-details' %}"
 															>Lorem ipsum dolor sit amet consecte</a
 														>
 													</h5>
@@ -99,7 +100,7 @@ endblock %} {% block content %}
 										<div class="swiper-slide">
 											<div class="product-list-item">
 												<div class="product-img img-zoom-effect">
-													<a href="single-product.html">
+													<a href="{% url 'core:single-product' %}">
 														<img
 															class="img-full"
 															src="{% static 'images/blog/small-size/1-2-86x86.jpg' %}"
@@ -109,7 +110,7 @@ endblock %} {% block content %}
 												</div>
 												<div class="product-content">
 													<h5 class="title mb-3">
-														<a href="blog-detail-left-sidebar.html"
+														<a href="{% url 'core:blog-details' %}"
 															>Lorem ipsum dolor sit amet consecte</a
 														>
 													</h5>
@@ -124,7 +125,7 @@ endblock %} {% block content %}
 										<div class="swiper-slide">
 											<div class="product-list-item">
 												<div class="product-img img-zoom-effect">
-													<a href="single-product.html">
+													<a href="{% url 'core:single-product' %}">
 														<img
 															class="img-full"
 															src="{% static 'images/blog/small-size/1-3-86x86.jpg' %}"
@@ -134,7 +135,7 @@ endblock %} {% block content %}
 												</div>
 												<div class="product-content">
 													<h5 class="title mb-3">
-														<a href="blog-detail-left-sidebar.html"
+														<a href="{% url 'core:blog-details' %}"
 															>Lorem ipsum dolor sit amet consecte</a
 														>
 													</h5>
@@ -180,7 +181,7 @@ endblock %} {% block content %}
 							<div class="blog-item row g-0">
 								<div class="col-md-6">
 									<div class="blog-img img-zoom-effect h-100">
-										<a href="blog-detail-left-sidebar.html">
+										<a href="{% url 'core:blog-details' %}">
 											<img
 												class="img-full h-100"
 												src="{% static 'images/blog/medium-size/1-1-370x315.jpg' %}"
@@ -208,7 +209,7 @@ endblock %} {% block content %}
 												</ul>
 											</div>
 											<h5 class="title mb-4">
-												<a href="blog-detail-left-sidebar.html"
+												<a href="{% url 'core:blog-details' %}"
 													>Blog Image Post</a
 												>
 											</h5>
@@ -220,7 +221,7 @@ endblock %} {% block content %}
 											<div class="button-wrap">
 												<a
 													class="btn btn-custom-size lg-size btn-dark rounded-0"
-													href="blog-detail-left-sidebar.html"
+													href="{% url 'core:blog-details' %}"
 													>Read More</a
 												>
 											</div>
@@ -236,7 +237,7 @@ endblock %} {% block content %}
 										<div class="blog-item row g-0">
 											<div class="col-md-6">
 												<div class="blog-img img-zoom-effect h-100">
-													<a href="blog-detail-left-sidebar.html">
+													<a href="{% url 'core:blog-details' %}">
 														<img
 															class="img-full h-100"
 															src="{% static 'images/blog/medium-size/1-3-370x315.jpg' %}"
@@ -265,7 +266,7 @@ endblock %} {% block content %}
 															</ul>
 														</div>
 														<h5 class="title mb-4">
-															<a href="blog-detail-left-sidebar.html"
+															<a href="{% url 'core:blog-details' %}"
 																>Blog Gallery Post</a
 															>
 														</h5>
@@ -277,7 +278,7 @@ endblock %} {% block content %}
 														<div class="button-wrap">
 															<a
 																class="btn btn-custom-size lg-size btn-dark rounded-0"
-																href="blog-detail-left-sidebar.html"
+																href="{% url 'core:blog-details' %}"
 																>Read More</a
 															>
 														</div>
@@ -290,7 +291,7 @@ endblock %} {% block content %}
 										<div class="blog-item row g-0">
 											<div class="col-md-6">
 												<div class="blog-img img-zoom-effect h-100">
-													<a href="blog-detail-left-sidebar.html">
+													<a href="{% url 'core:blog-details' %}">
 														<img
 															class="img-full h-100"
 															src="{% static 'images/blog/medium-size/1-2-370x315.jpg' %}"
@@ -319,7 +320,7 @@ endblock %} {% block content %}
 															</ul>
 														</div>
 														<h5 class="title mb-4">
-															<a href="blog-detail-left-sidebar.html"
+															<a href="{% url 'core:blog-details' %}"
 																>Blog Second Gallery Post</a
 															>
 														</h5>
@@ -331,7 +332,7 @@ endblock %} {% block content %}
 														<div class="button-wrap">
 															<a
 																class="btn btn-custom-size lg-size btn-dark rounded-0"
-																href="blog-detail-left-sidebar.html"
+																href="{% url 'core:blog-details' %}"
 																>Read More</a
 															>
 														</div>
@@ -344,7 +345,7 @@ endblock %} {% block content %}
 										<div class="blog-item row g-0">
 											<div class="col-md-6">
 												<div class="blog-img img-zoom-effect h-100">
-													<a href="blog-detail-left-sidebar.html">
+													<a href="{% url 'core:blog-details' %}">
 														<img
 															class="img-full h-100"
 															src="{% static 'images/blog/medium-size/1-1-370x315.jpg' %}"
@@ -373,7 +374,7 @@ endblock %} {% block content %}
 															</ul>
 														</div>
 														<h5 class="title mb-4">
-															<a href="blog-detail-left-sidebar.html"
+															<a href="{% url 'core:blog-details' %}"
 																>Blog Third Gallery Post</a
 															>
 														</h5>
@@ -385,7 +386,7 @@ endblock %} {% block content %}
 														<div class="button-wrap">
 															<a
 																class="btn btn-custom-size lg-size btn-dark rounded-0"
-																href="blog-detail-left-sidebar.html"
+																href="{% url 'core:blog-details' %}"
 																>Read More</a
 															>
 														</div>
@@ -426,7 +427,7 @@ endblock %} {% block content %}
 												</ul>
 											</div>
 											<h5 class="title mb-4">
-												<a href="blog-detail-left-sidebar.html"
+												<a href="{% url 'core:blog-details' %}"
 													>Blog Audio Post</a
 												>
 											</h5>
@@ -438,7 +439,7 @@ endblock %} {% block content %}
 											<div class="button-wrap">
 												<a
 													class="btn btn-custom-size lg-size btn-dark rounded-0"
-													href="blog-detail-left-sidebar.html"
+													href="{% url 'core:blog-details' %}"
 													>Read More</a
 												>
 											</div>
@@ -478,7 +479,7 @@ endblock %} {% block content %}
 												</ul>
 											</div>
 											<h5 class="title mb-4">
-												<a href="blog-detail-left-sidebar.html"
+												<a href="{% url 'core:blog-details' %}"
 													>Blog Video Post</a
 												>
 											</h5>
@@ -490,7 +491,7 @@ endblock %} {% block content %}
 											<div class="button-wrap">
 												<a
 													class="btn btn-custom-size lg-size btn-dark rounded-0"
-													href="blog-detail-left-sidebar.html"
+													href="{% url 'core:blog-details' %}"
 													>Read More</a
 												>
 											</div>
@@ -503,7 +504,7 @@ endblock %} {% block content %}
 							<div class="blog-item row g-0">
 								<div class="col-md-6">
 									<div class="blog-img img-zoom-effect h-100">
-										<a href="blog-detail-left-sidebar.html">
+										<a href="{% url 'core:blog-details' %}">
 											<img
 												class="img-full h-100"
 												src="{% static 'images/blog/medium-size/1-2-370x315.jpg' %}"
@@ -531,7 +532,7 @@ endblock %} {% block content %}
 												</ul>
 											</div>
 											<h5 class="title mb-4">
-												<a href="blog-detail-left-sidebar.html"
+												<a href="{% url 'core:blog-details' %}"
 													>Lorem ipsum dolor sit amet consecte</a
 												>
 											</h5>
@@ -543,7 +544,7 @@ endblock %} {% block content %}
 											<div class="button-wrap">
 												<a
 													class="btn btn-custom-size lg-size btn-dark rounded-0"
-													href="blog-detail-left-sidebar.html"
+													href="{% url 'core:blog-details' %}"
 													>Read More</a
 												>
 											</div>
@@ -556,7 +557,7 @@ endblock %} {% block content %}
 							<div class="blog-item row g-0">
 								<div class="col-md-6">
 									<div class="blog-img img-zoom-effect h-100">
-										<a href="blog-detail-left-sidebar.html">
+										<a href="{% url 'core:blog-details' %}">
 											<img
 												class="img-full h-100"
 												src="{% static 'images/blog/medium-size/1-3-370x315.jpg' %}"
@@ -584,7 +585,7 @@ endblock %} {% block content %}
 												</ul>
 											</div>
 											<h5 class="title mb-4">
-												<a href="blog-detail-left-sidebar.html"
+												<a href="{% url 'core:blog-details' %}"
 													>Lorem ipsum dolor sit amet consecte</a
 												>
 											</h5>
@@ -596,7 +597,7 @@ endblock %} {% block content %}
 											<div class="button-wrap">
 												<a
 													class="btn btn-custom-size lg-size btn-dark rounded-0"
-													href="blog-detail-left-sidebar.html"
+													href="{% url 'core:blog-details' %}"
 													>Read More</a
 												>
 											</div>
