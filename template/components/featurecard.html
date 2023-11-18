@@ -1,41 +1,43 @@
 <div class="banner-area banner-style-2 section-space-y-axis-100" data-bg-image="{% render_slot slots.image_src %}">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="banner-content">
-          <div class="section-title">
-            <span class="sub-title text-primary">Special Sale</span>
-            <h2 class="title font-size-60 mb-7">{% render_slot slots.title %}</h2>
-          </div>
-          <div class="price-box pb-6">
-            <span class="old-price text-danger">${% render_slot slots.oldprice %}</span>
-            <span class="new-price text-primary">-${% render_slot slots.price %}</span>
-          </div>
-          <div class="countdown-wrap with-dark-border">
-            <div class="countdown item-4" data-countdown="{% render_slot slots.offerdate %}" data-format="short">
-              <div class="countdown__item me-3">
-                <span class="countdown__time daysLeft"></span>
-                <span class="countdown__text daysText"></span>
-              </div>
-              <div class="countdown__item me-3">
-                <span class="countdown__time hoursLeft"></span>
-                <span class="countdown__text hoursText"></span>
-              </div>
-              <div class="countdown__item me-3">
-                <span class="countdown__time minsLeft"></span>
-                <span class="countdown__text minsText"></span>
-              </div>
-              <div class="countdown__item">
-                <span class="countdown__time secsLeft"></span>
-                <span class="countdown__text secsText"></span>
-              </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="banner-content">
+                    <div class="section-title">
+                        <span class="sub-title text-primary">Special Sale</span>
+                        <h2 class="title font-size-60 mb-7">{% render_slot slots.title %}</h2>
+                    </div>
+                    <div class="price-box pb-6">
+                        <span class="old-price text-danger">${% render_slot slots.oldprice %}</span>
+                        <span class="new-price text-primary">-${% render_slot slots.price %}</span>
+                    </div>
+                    <div class="countdown-wrap with-dark-border">
+                        <div class="countdown item-4" data-countdown="{% render_slot slots.offerdate %}"
+                             data-format="short">
+                            <div class="countdown__item me-3">
+                                <span class="countdown__time daysLeft"></span>
+                                <span class="countdown__text daysText"></span>
+                            </div>
+                            <div class="countdown__item me-3">
+                                <span class="countdown__time hoursLeft"></span>
+                                <span class="countdown__text hoursText"></span>
+                            </div>
+                            <div class="countdown__item me-3">
+                                <span class="countdown__time minsLeft"></span>
+                                <span class="countdown__text minsText"></span>
+                            </div>
+                            <div class="countdown__item">
+                                <span class="countdown__time secsLeft"></span>
+                                <span class="countdown__text secsText"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-wrap pt-10">
+                        <a class="btn btn-custom-size lg-size btn-primary btn-dark-hover rounded-0"
+                           href="{% url 'core:single-shop' %}">Shop Now</a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="button-wrap pt-10">
-            <a class="btn btn-custom-size lg-size btn-primary btn-dark-hover rounded-0" href="{% url 'core:single-shop' %}">Shop Now</a>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

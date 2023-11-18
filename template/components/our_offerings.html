@@ -1,13 +1,13 @@
 <div class="col-lg-4 col-md-6 pt-6">
-  <div class="shipping-item">
-    <div class="shipping-img">
-      <img src="{% render_slot slots.image_src %}" alt="Shipping Icon" />
+    <div class="shipping-item">
+        <div class="shipping-img">
+            <img src="{% render_slot slots.image_src %}" alt="Shipping Icon"/>
+        </div>
+        <div class="shipping-content">
+            <h5 class="title">{% render_slot slots.title %}</h5>
+            <p class="short-desc mb-0">
+                {% render_slot slots.subtitle %}
+            </p>
+        </div>
     </div>
-    <div class="shipping-content">
-      <h5 class="title">{% render_slot slots.title %}</h5>
-      <p class="short-desc mb-0">
-        {% render_slot slots.subtitle %}
-      </p>
-    </div>
-  </div>
 </div>

@@ -1,34 +1,34 @@
 <li>
-  <ul class="user-info">
-    <li class="user-avatar">
-      <img src="{% render_slot slots.image_src %}" alt="User Image" />
-    </li>
-    <li class="user-comment">
-      <div class="rating-box">
-        <ul>
-          <li>
-            <i class="pe-7s-star"></i>
-          </li>
-          <li>
-            <i class="pe-7s-star"></i>
-          </li>
-          <li>
-            <i class="pe-7s-star"></i>
-          </li>
-          <li>
-            <i class="pe-7s-star"></i>
-          </li>
-          <li>
-            <i class="pe-7s-star"></i>
-          </li>
-        </ul>
-      </div>
-      <div class="meta">
-        <span><strong>{% render_slot slots.fullname %}-</strong> {% render_slot slots.date %}</span>
-      </div>
-      <p class="short-desc mb-0">
-        “{% render_slot slots.message %}“
-      </p>
-    </li>
-  </ul>
+    <ul class="user-info">
+        <li class="user-avatar">
+            <img src="{% render_slot slots.image_src %}" alt="User Image"/>
+        </li>
+        <li class="user-comment">
+            <div class="rating-box">
+                <ul>
+                    <li>
+                        <i class="pe-7s-star"></i>
+                    </li>
+                    <li>
+                        <i class="pe-7s-star"></i>
+                    </li>
+                    <li>
+                        <i class="pe-7s-star"></i>
+                    </li>
+                    <li>
+                        <i class="pe-7s-star"></i>
+                    </li>
+                    <li>
+                        <i class="pe-7s-star"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="meta">
+                <span><strong>{% render_slot slots.fullname %}-</strong> {% render_slot slots.date %}</span>
+            </div>
+            <p class="short-desc mb-0">
+                “{% render_slot slots.message %}“
+            </p>
+        </li>
+    </ul>
 </li>

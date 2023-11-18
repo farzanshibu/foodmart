@@ -1,45 +1,46 @@
 <div class="col-lg-4 col-sm-6 pt-6">
-  <div class="product-item">
-    <div class="product-img img-zoom-effect">
-      <a href="{% url 'core:single-product' %}"><img class="img-full" src="{% render_slot slots.image_src %}" alt="Product Images" /></a>
-      <div class="product-add-action">
-        <ul>
-          <li>
-            <a href="{% url 'core:cart' %}"><i class="pe-7s-cart"></i></a>
-          </li>
-          <li>
-            <a href="{% url 'core:compare' %}"><i class="pe-7s-shuffle"></i></a>
-          </li>
-          <li>
-            <a href="{% url 'core:wishlist' %}"><i class="pe-7s-like"></i></a>
-          </li>
-        </ul>
-      </div>
+    <div class="product-item">
+        <div class="product-img img-zoom-effect">
+            <a href="{% url 'core:single-product' %}"><img class="img-full" src="{% render_slot slots.image_src %}"
+                                                           alt="Product Images"/></a>
+            <div class="product-add-action">
+                <ul>
+                    <li>
+                        <a href="{% url 'core:cart' %}"><i class="pe-7s-cart"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'core:compare' %}"><i class="pe-7s-shuffle"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'core:wishlist' %}"><i class="pe-7s-like"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-content">
+            <a class="product-name" href="{% url 'core:single-product' %}">{% render_slot slots.product %}</a>
+            <div class="price-box pb-1">
+                <span class="new-price">${% render_slot slots.price %}</span>
+            </div>
+            <div class="rating-box">
+                <ul>
+                    <li>
+                        <i class="pe-7s-star"></i>
+                    </li>
+                    <li>
+                        <i class="pe-7s-star"></i>
+                    </li>
+                    <li>
+                        <i class="pe-7s-star"></i>
+                    </li>
+                    <li>
+                        <i class="pe-7s-star"></i>
+                    </li>
+                    <li>
+                        <i class="pe-7s-star"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="product-content">
-      <a class="product-name" href="{% url 'core:single-product' %}">{% render_slot slots.product %}</a>
-      <div class="price-box pb-1">
-        <span class="new-price">${% render_slot slots.price %}</span>
-      </div>
-      <div class="rating-box">
-        <ul>
-          <li>
-            <i class="pe-7s-star"></i>
-          </li>
-          <li>
-            <i class="pe-7s-star"></i>
-          </li>
-          <li>
-            <i class="pe-7s-star"></i>
-          </li>
-          <li>
-            <i class="pe-7s-star"></i>
-          </li>
-          <li>
-            <i class="pe-7s-star"></i>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
 </div>

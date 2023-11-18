@@ -1,14 +1,15 @@
-          <div class="col-lg-4 col-md-6 pt-6 pt-md-0">
-            <div class="banner-item">
-              <div class="banner-img img-zoom-effect">
-                <img class="img-full" src="{% render_slot slots.image_scr %}" alt="Banner Image" />
-                <div class="inner-content">
-                  <h5 class="offer">-{% render_slot slots.offer %} Off</h5>
-                  <h4 class="title mb-5">{% render_slot slots.product %}<br />{% render_slot slots.category %}</h4>
-                  <div class="button-wrap">
-                    <a class="btn btn-primary btn-white-hover rounded-0" href="{% url 'core:single-shop' %}">Shop Now</a>
-                  </div>
+<div class="col-lg-4 col-md-6 pt-6 pt-md-0">
+    <div class="banner-item">
+        <div class="banner-img img-zoom-effect">
+            <img class="img-full" src="{% render_slot slots.image_scr %}" alt="Banner Image"/>
+            <div class="inner-content">
+                <h5 class="offer">-{% render_slot slots.offer %} Off</h5>
+                <h4 class="title mb-5">{% render_slot slots.product %}<br/>{% render_slot slots.category %}</h4>
+                <div class="button-wrap">
+                    <a class="btn btn-primary btn-white-hover rounded-0" href="{% url 'core:single-shop' %}">Shop
+                        Now</a>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
+    </div>
+</div>

@@ -2,294 +2,297 @@
 {% load static %}
 
 {% block title %}
-  Home
+    Home
 {% endblock %}
 {% block content %}
-  <!-- Begin Slider Area -->
-  <div class="slider-area">
-    <!-- Main Slider -->
-    <div class="swiper-container main-slider-2 swiper-arrow with-bg_white">
-      <div class="swiper-wrapper">
-        {% slider %}
+    <!-- Begin Slider Area -->
+    <div class="slider-area">
+        <!-- Main Slider -->
+        <div class="swiper-container main-slider-2 swiper-arrow with-bg_white">
+            <div class="swiper-wrapper">
+                {% slider %}
 
-        {% slot category %}Featured{% endslot %}
-        {% slot title %}Card title{% endslot %}
-        {% slot description %}Card description{% endslot %}
-        {% slot image_scr %}/static/images/slider/bg/2-1.jpg{% endslot %}
+                    {% slot category %}Featured{% endslot %}
+                    {% slot title %}Card title{% endslot %}
+                    {% slot description %}Card description{% endslot %}
+                    {% slot image_scr %}/static/images/slider/bg/2-1.jpg{% endslot %}
 
-        {% endslider %}
-      </div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination with-bg d-md-none"></div>
+                {% endslider %}
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination with-bg d-md-none"></div>
 
-      <!-- Add Arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
     </div>
-  </div>
-  <!-- Slider Area End Here -->
+    <!-- Slider Area End Here -->
 
-  <!-- Begin Banner With Category -->
-  <div class="banner-with-category">
-    <div class="product-category-area section-space-top-100">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
+    <!-- Begin Banner With Category -->
+    <div class="banner-with-category">
+        <div class="product-category-area section-space-top-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center pb-55">
+                            <span class="sub-title text-primary">See Our Latest</span>
+                            <h2 class="title mb-0">Shop By Category</h2>
+                        </div>
+                        <div class="product-category-item">
+                            <ul>
+                                {% categorycard %}
+
+                                    {% slot category %}All Items{% endslot %}
+                                    {% slot image_src %}/static/images/banner/category-icon/1.png{% endslot %}
+
+                                {% endcategorycard %}
+                                {% categorycard %}
+
+                                    {% slot category %}Fresh Fruits{% endslot %}
+                                    {% slot image_src %}/static/images/banner/category-icon/2.png{% endslot %}
+
+                                {% endcategorycard %}
+                                {% categorycard %}
+
+                                    {% slot category %}Vegetable{% endslot %}
+                                    {% slot image_src %}/static/images/banner/category-icon/3.png{% endslot %}
+
+                                {% endcategorycard %}
+                                {% categorycard %}
+
+                                    {% slot category %}Fish & Meat{% endslot %}
+                                    {% slot image_src %}/static/images/banner/category-icon/4.png{% endslot %}
+
+                                {% endcategorycard %}
+                                {% categorycard %}
+
+                                    {% slot category %}Wheat{% endslot %}
+                                    {% slot image_src %}/static/images/banner/category-icon/5.png{% endslot %}
+
+                                {% endcategorycard %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-area section-space-top-95">
+            <div class="container">
+                <div class="row">
+                    {% superdeal %}
+
+                        {% slot category %}Orange{% endslot %}
+                        {% slot product %}Bell Pepper{% endslot %}
+                        {% slot offer %}10{% endslot %}
+                        {% slot image_scr %}/static/images/banner/1-1-370x250.jpg{% endslot %}
+
+                    {% endsuperdeal %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner With Category End Here -->
+
+    <!-- Begin Product Area -->
+    <div class="product-area product-style-2 section-space-y-axis-100">
+        <div class="container">
             <div class="section-title text-center pb-55">
-              <span class="sub-title text-primary">See Our Latest</span>
-              <h2 class="title mb-0">Shop By Category</h2>
+                <span class="sub-title text-primary">See Our Latest</span>
+                <h2 class="title mb-0">Organic Products</h2>
             </div>
-            <div class="product-category-item">
-              <ul>
-                {% categorycard %}
+            <div class="row">
+                {% shopcard %}
+                    <!-- TODO OLDprice and offer banner -->
 
-                {% slot category %}All Items{% endslot %}
-                {% slot image_src %}/static/images/banner/category-icon/1.png{% endslot %}
+                    {% slot price %}100{% endslot %}
+                    {% slot product %}Orange{% endslot %}
+                    {% slot image_src %}/static/images/product/medium-size/1-1-270x300.jpg{% endslot %}
 
-                {% endcategorycard %}
-                {% categorycard %}
-
-                {% slot category %}Fresh Fruits{% endslot %}
-                {% slot image_src %}/static/images/banner/category-icon/2.png{% endslot %}
-
-                {% endcategorycard %}
-                {% categorycard %}
-
-                {% slot category %}Vegetable{% endslot %}
-                {% slot image_src %}/static/images/banner/category-icon/3.png{% endslot %}
-
-                {% endcategorycard %}
-                {% categorycard %}
-
-                {% slot category %}Fish & Meat{% endslot %}
-                {% slot image_src %}/static/images/banner/category-icon/4.png{% endslot %}
-
-                {% endcategorycard %}
-                {% categorycard %}
-
-                {% slot category %}Wheat{% endslot %}
-                {% slot image_src %}/static/images/banner/category-icon/5.png{% endslot %}
-
-                {% endcategorycard %}
-              </ul>
+                {% endshopcard %}
             </div>
-          </div>
         </div>
-      </div>
     </div>
-    <div class="banner-area section-space-top-95">
-      <div class="container">
-        <div class="row">
-          {% superdeal %}
+    <!-- Product Area End Here -->
 
-          {% slot category %}Orange{% endslot %}
-          {% slot product %}Bell Pepper{% endslot %}
-          {% slot offer %}10{% endslot %}
-          {% slot image_scr %}/static/images/banner/1-1-370x250.jpg{% endslot %}
-
-          {% endsuperdeal %}
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Banner With Category End Here -->
-
-  <!-- Begin Product Area -->
-  <div class="product-area product-style-2 section-space-y-axis-100">
-    <div class="container">
-      <div class="section-title text-center pb-55">
-        <span class="sub-title text-primary">See Our Latest</span>
-        <h2 class="title mb-0">Organic Products</h2>
-      </div>
-      <div class="row">
-        {% shopcard %}
-        <!-- TODO OLDprice and offer banner -->
-
-        {% slot price %}100{% endslot %}
-        {% slot product %}Orange{% endslot %}
-        {% slot image_src %}/static/images/product/medium-size/1-1-270x300.jpg{% endslot %}
-
-        {% endshopcard %}
-      </div>
-    </div>
-  </div>
-  <!-- Product Area End Here -->
-
-  <!-- Begin Banner Area -->
-  {% featurecard %}
-
-  {% slot title %}Orange{% endslot %}
-  {% slot oldprice %}20{% endslot %}
-  {% slot price %}20{% endslot %}
-  {% slot offerdate %}2023/12/31{% endslot %}
-  {% slot image_src %}/static/images/banner/3-1-1920x582.jpg{% endslot %}
-
-  {% endfeaturecard %}
-  <!-- Banner Area End Here -->
-
-  <!-- Begin Shipping Area -->
-  <div class="shipping-area section-space-top-100">
-    <div class="container">
-      <div class="row">
-        {% ourofferings %}
+    <!-- Begin Banner Area -->
+    {% featurecard %}
 
         {% slot title %}Orange{% endslot %}
-        {% slot subtitle %}Orange{% endslot %}
-        {% slot image_src %}/static/images/shipping/icon/earphones.png{% endslot %}
+        {% slot oldprice %}20{% endslot %}
+        {% slot price %}20{% endslot %}
+        {% slot offerdate %}2023/12/31{% endslot %}
+        {% slot image_src %}/static/images/banner/3-1-1920x582.jpg{% endslot %}
 
-        {% endourofferings %}
-      </div>
-    </div>
-  </div>
-  <!-- Shipping Area End Here -->
+    {% endfeaturecard %}
+    <!-- Banner Area End Here -->
 
-  <!-- Begin Product Area -->
-  <div class="product-area section-space-y-axis-100 product-style-2">
-    <div class="container">
-      <div class="section-title text-center pb-55">
-        <span class="sub-title text-primary">See Our Latest</span>
-        <h2 class="title mb-0">Arrival Products</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="swiper-container product-slider swiper-arrow with-radius border-issue">
-            <div class="swiper-wrapper">
-              {% shopcard class = 'swiper-slide' %}
-              <!-- TODO OLDprice and offer banner star -->
+    <!-- Begin Shipping Area -->
+    <div class="shipping-area section-space-top-100">
+        <div class="container">
+            <div class="row">
+                {% ourofferings %}
 
-              {% slot price %}100{% endslot %}
-              {% slot product %}Orange{% endslot %}
-              {% slot image_src %}/static/images/product/medium-size/1-1-270x300.jpg{% endslot %}
+                    {% slot title %}Orange{% endslot %}
+                    {% slot subtitle %}Orange{% endslot %}
+                    {% slot image_src %}/static/images/shipping/icon/earphones.png{% endslot %}
 
-              {% endshopcard %}
+                {% endourofferings %}
             </div>
-            <!-- Add Arrows -->
-            <div class="swiper-nav-wrap">
-              <div class="swiper-button-next"></div>
-            </div>
-            <div class="swiper-button-prev"></div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-  <!-- Product Area End Here -->
+    <!-- Shipping Area End Here -->
 
-  <!-- Begin Banner Area -->
-  <div class="banner-with-testimonial py-10" data-bg-image="{% static 'images/banner/2-1-1920x523.jpg' %}">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="parallax-img-wrap">
-            <div class="papaya">
-              <div class="scene fill">
-                <div class="expand-width" data-depth="0.2">
-                  <img src="{% static 'images/banner/inner-img/2-1-503x430.png' %}" alt="Banner Images" />
+    <!-- Begin Product Area -->
+    <div class="product-area section-space-y-axis-100 product-style-2">
+        <div class="container">
+            <div class="section-title text-center pb-55">
+                <span class="sub-title text-primary">See Our Latest</span>
+                <h2 class="title mb-0">Arrival Products</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="swiper-container product-slider swiper-arrow with-radius border-issue">
+                        <div class="swiper-wrapper">
+                            {% shopcard class = 'swiper-slide' %}
+                                <!-- TODO OLDprice and offer banner star -->
+
+                                {% slot price %}100{% endslot %}
+                                {% slot product %}Orange{% endslot %}
+                                {% slot image_src %}/static/images/product/medium-size/1-1-270x300.jpg{% endslot %}
+
+                            {% endshopcard %}
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-nav-wrap">
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-        <div class="col-md-6 align-self-center">
-          <div class="swiper-container testimonial-slider text-white">
-            <div class="swiper-wrapper">
-              {% clientcard %}
-              <!-- TODO OLDprice and offer banner -->
-
-              {% slot fullname %}unknown{% endslot %}
-              {% slot occupation %}Orange{% endslot %}
-              {% slot description %}Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste voluptas asperiores adipisci vero nam, consequuntur inventore ut. Ipsum, minima esse.{% endslot %}
-              {% slot image_src %}/static/images/testimonial/user/1.png{% endslot %}
-
-              {% endclientcard %}
-            </div>
-            <!-- Add Arrows -->
-            <div class="testimonial-button-next"></div>
-            <div class="testimonial-button-prev"></div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-  <!-- Banner Area End Here -->
+    <!-- Product Area End Here -->
 
-  <!-- Begin Product Area -->
-  <div class="product-area section-space-top-100 product-style-2">
-    <div class="container">
-      <div class="section-title text-center pb-55">
-        <span class="sub-title text-primary">See Our Latest</span>
-        <h2 class="title mb-0">Arrival Products</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="swiper-container product-list-slider border-issue">
-            <div class="swiper-wrapper">
-              {% shopcardsmall %}
-              <!-- TODO OLDprice and offer banner -->
+    <!-- Begin Banner Area -->
+    <div class="banner-with-testimonial py-10" data-bg-image="{% static 'images/banner/2-1-1920x523.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="parallax-img-wrap">
+                        <div class="papaya">
+                            <div class="scene fill">
+                                <div class="expand-width" data-depth="0.2">
+                                    <img src="{% static 'images/banner/inner-img/2-1-503x430.png' %}"
+                                         alt="Banner Images"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="swiper-container testimonial-slider text-white">
+                        <div class="swiper-wrapper">
+                            {% clientcard %}
+                                <!-- TODO OLDprice and offer banner -->
 
-              {% slot price %}100{% endslot %}
-              {% slot product %}Orange{% endslot %}
-              {% slot image_src %}/static/images/product/small-size/1-1-112x124.jpg{% endslot %}
+                                {% slot fullname %}unknown{% endslot %}
+                                {% slot occupation %}Orange{% endslot %}
+                                {% slot description %}Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
+                                    voluptas asperiores adipisci vero nam, consequuntur inventore ut. Ipsum, minima
+                                    esse.{% endslot %}
+                                {% slot image_src %}/static/images/testimonial/user/1.png{% endslot %}
 
-              {% endshopcardsmall %}
+                            {% endclientcard %}
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="testimonial-button-next"></div>
+                        <div class="testimonial-button-prev"></div>
+                    </div>
+                </div>
             </div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-  <!-- Product Area End Here -->
+    <!-- Banner Area End Here -->
 
-  <!-- Begin Brand Area -->
-  <div class="brand-area section-space-y-axis-100">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="swiper-container brand-slider">
-            <div class="swiper-wrapper">
-              {% brandcard %}
-              {% slot image_src %}/static/images/brand/1-1.png{% endslot %}
-              {% endbrandcard %}
+    <!-- Begin Product Area -->
+    <div class="product-area section-space-top-100 product-style-2">
+        <div class="container">
+            <div class="section-title text-center pb-55">
+                <span class="sub-title text-primary">See Our Latest</span>
+                <h2 class="title mb-0">Arrival Products</h2>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Brand Area End Here -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="swiper-container product-list-slider border-issue">
+                        <div class="swiper-wrapper">
+                            {% shopcardsmall %}
+                                <!-- TODO OLDprice and offer banner -->
 
-  <!-- Begin Blog Area -->
-  <div class="blog-area section-space-y-axis-100">
-    <div class="container">
-      <div class="section-title text-center pb-55">
-        <span class="sub-title text-primary">Read Our</span>
-        <h2 class="title mb-0">Latest Blog</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="swiper-container blog-slider">
-            <div class="swiper-wrapper">
-              {% blogcard %}
-              <!-- TODO OLDprice and offer banner -->
+                                {% slot price %}100{% endslot %}
+                                {% slot product %}Orange{% endslot %}
+                                {% slot image_src %}/static/images/product/small-size/1-1-112x124.jpg{% endslot %}
 
-              {% slot title %}tittle{% endslot %}
-              {% slot date %}23 May, 2023{% endslot %}
-              {% slot comment %}5{% endslot %}
-              {% slot description %}Orange{% endslot %}
-              {% slot image_src %}/static/images/blog/medium-size/1-1-370x315.jpg{% endslot %}
-
-              {% endblogcard %}
+                            {% endshopcardsmall %}
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
             </div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-  <!-- Blog Area End Here -->
+    <!-- Product Area End Here -->
+
+    <!-- Begin Brand Area -->
+    <div class="brand-area section-space-y-axis-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="swiper-container brand-slider">
+                        <div class="swiper-wrapper">
+                            {% brandcard %}
+                                {% slot image_src %}/static/images/brand/1-1.png{% endslot %}
+                            {% endbrandcard %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Brand Area End Here -->
+
+    <!-- Begin Blog Area -->
+    <div class="blog-area section-space-y-axis-100">
+        <div class="container">
+            <div class="section-title text-center pb-55">
+                <span class="sub-title text-primary">Read Our</span>
+                <h2 class="title mb-0">Latest Blog</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="swiper-container blog-slider">
+                        <div class="swiper-wrapper">
+                            {% blogcard %}
+                                <!-- TODO OLDprice and offer banner -->
+
+                                {% slot title %}tittle{% endslot %}
+                                {% slot date %}23 May, 2023{% endslot %}
+                                {% slot comment %}5{% endslot %}
+                                {% slot description %}Orange{% endslot %}
+                                {% slot image_src %}/static/images/blog/medium-size/1-1-370x315.jpg{% endslot %}
+
+                            {% endblogcard %}
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Area End Here -->
 {% endblock %}

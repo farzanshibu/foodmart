@@ -1,27 +1,30 @@
 <div class="swiper-slide">
-  <div class="blog-item">
-    <div class="blog-img img-zoom-effect">
-      <a href="{% url 'core:blog-details' %}"><img class="img-full" src="{% render_slot slots.image_src %}" alt="Blog Image" /></a>
+    <div class="blog-item">
+        <div class="blog-img img-zoom-effect">
+            <a href="{% url 'core:blog-details' %}"><img class="img-full" src="{% render_slot slots.image_src %}"
+                                                         alt="Blog Image"/></a>
+        </div>
+        <div class="blog-content">
+            <div class="blog-meta text-dim-gray pb-3">
+                <ul>
+                    <li class="date">
+                        <i class="fa fa-calendar-o me-2"></i>{% render_slot slots.date %}
+                    </li>
+                    <li>
+                        <span class="comments me-3"><a
+                                href="javascript:void(0)">{% render_slot slots.comment %}Comments</a></span>
+                        <span class="link-share"><a href="javascript:void(0)">Share</a></span>
+                    </li>
+                </ul>
+            </div>
+            <h5 class="title mb-4"><a href="{% url 'core:blog-details' %}">{% render_slot slots.title %}</a></h5>
+            <p class="short-desc mb-5">
+                {% render_slot slots.description %}
+            </p>
+            <div class="button-wrap">
+                <a class="btn btn-custom-size btn-dark btn-lg rounded-0" href="{% url 'core:blog-details' %}">Read
+                    More</a>
+            </div>
+        </div>
     </div>
-    <div class="blog-content">
-      <div class="blog-meta text-dim-gray pb-3">
-        <ul>
-          <li class="date">
-            <i class="fa fa-calendar-o me-2"></i>{% render_slot slots.date %}
-          </li>
-          <li>
-            <span class="comments me-3"><a href="javascript:void(0)">{% render_slot slots.comment %}Comments</a></span>
-            <span class="link-share"><a href="javascript:void(0)">Share</a></span>
-          </li>
-        </ul>
-      </div>
-      <h5 class="title mb-4"><a href="{% url 'core:blog-details' %}">{% render_slot slots.title %}</a></h5>
-      <p class="short-desc mb-5">
-        {% render_slot slots.description %}
-      </p>
-      <div class="button-wrap">
-        <a class="btn btn-custom-size btn-dark btn-lg rounded-0" href="{% url 'core:blog-details' %}">Read More</a>
-      </div>
-    </div>
-  </div>
 </div>
