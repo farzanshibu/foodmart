@@ -1,0 +1,26 @@
+
+<div class="swiper-slide animation-style-01">
+	<div
+		class="slide-inner bg-height"
+		data-bg-image="{% render_slot slots.image_scr %}"
+	>
+		<div class="container">
+			<div class="slide-content">
+				<h2 class="title font-weight-bold mb-4">
+					{% render_slot slots.category %} <br />
+					{% render_slot slots.title %}
+				</h2>
+				<p class="short-desc different-width mb-9">
+					{% render_slot slots.description %}
+				</p>
+				<div class="button-wrap">
+					<a
+						class="btn btn-custom-size lg-size btn-primary btn-white-hover rounded-0"
+						href="{% url 'core:single-shop' %}"
+						>Shop Now</a
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
